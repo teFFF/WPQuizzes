@@ -3,27 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4C502B58257752E60004F1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C502B57257752E60004F1D1 /* AppDelegate.swift */; };
 		4C502B5A257752E60004F1D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C502B59257752E60004F1D1 /* SceneDelegate.swift */; };
-		4C502B5C257752E60004F1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C502B5B257752E60004F1D1 /* ViewController.swift */; };
 		4C502B5F257752E60004F1D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C502B5D257752E60004F1D1 /* Main.storyboard */; };
 		4C502B61257752EB0004F1D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C502B60257752EB0004F1D1 /* Assets.xcassets */; };
 		4C502B64257752EB0004F1D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C502B62257752EB0004F1D1 /* LaunchScreen.storyboard */; };
+		4C502B70257755980004F1D1 /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C502B6F257755980004F1D1 /* DataResponse.swift */; };
+		4C502B74257755CB0004F1D1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C502B73257755CB0004F1D1 /* TableViewController.swift */; };
+		4C502B77257756590004F1D1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C502B76257756590004F1D1 /* TableViewCell.swift */; };
+		4C502B7B257758310004F1D1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4C502B7A257758310004F1D1 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C502B54257752E60004F1D1 /* WP Quizzes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WP Quizzes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C502B57257752E60004F1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C502B59257752E60004F1D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C502B5B257752E60004F1D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C502B5E257752E60004F1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C502B60257752EB0004F1D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C502B63257752EB0004F1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C502B65257752EB0004F1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C502B6F257755980004F1D1 /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
+		4C502B73257755CB0004F1D1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		4C502B76257756590004F1D1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C502B7B257758310004F1D1 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +64,9 @@
 			children = (
 				4C502B57257752E60004F1D1 /* AppDelegate.swift */,
 				4C502B59257752E60004F1D1 /* SceneDelegate.swift */,
-				4C502B5B257752E60004F1D1 /* ViewController.swift */,
+				4C502B6F257755980004F1D1 /* DataResponse.swift */,
+				4C502B73257755CB0004F1D1 /* TableViewController.swift */,
+				4C502B76257756590004F1D1 /* TableViewCell.swift */,
 				4C502B5D257752E60004F1D1 /* Main.storyboard */,
 				4C502B60257752EB0004F1D1 /* Assets.xcassets */,
 				4C502B62257752EB0004F1D1 /* LaunchScreen.storyboard */,
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = "WP Quizzes";
+			packageProductDependencies = (
+				4C502B7A257758310004F1D1 /* SDWebImage */,
+			);
 			productName = "WP Quizzes";
 			productReference = 4C502B54257752E60004F1D1 /* WP Quizzes.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 4C502B4B257752E60004F1D1;
+			packageReferences = (
+				4C502B79257758310004F1D1 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 4C502B55257752E60004F1D1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,9 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C502B5C257752E60004F1D1 /* ViewController.swift in Sources */,
+				4C502B77257756590004F1D1 /* TableViewCell.swift in Sources */,
 				4C502B58257752E60004F1D1 /* AppDelegate.swift in Sources */,
+				4C502B70257755980004F1D1 /* DataResponse.swift in Sources */,
 				4C502B5A257752E60004F1D1 /* SceneDelegate.swift in Sources */,
+				4C502B74257755CB0004F1D1 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C502B79257758310004F1D1 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C502B7A257758310004F1D1 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C502B79257758310004F1D1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4C502B4C257752E60004F1D1 /* Project object */;
 }
