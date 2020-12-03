@@ -16,6 +16,8 @@
 		4C502B74257755CB0004F1D1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C502B73257755CB0004F1D1 /* TableViewController.swift */; };
 		4C502B77257756590004F1D1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C502B76257756590004F1D1 /* TableViewCell.swift */; };
 		4C502B7B257758310004F1D1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4C502B7A257758310004F1D1 /* SDWebImage */; };
+		4C502B87257956A80004F1D1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C502B86257956A80004F1D1 /* QuestionViewController.swift */; };
+		4C502B8D257999AF0004F1D1 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C502B8C257999AF0004F1D1 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		4C502B6F257755980004F1D1 /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
 		4C502B73257755CB0004F1D1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		4C502B76257756590004F1D1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		4C502B86257956A80004F1D1 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		4C502B8C257999AF0004F1D1 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				4C502B6F257755980004F1D1 /* DataResponse.swift */,
 				4C502B73257755CB0004F1D1 /* TableViewController.swift */,
 				4C502B76257756590004F1D1 /* TableViewCell.swift */,
+				4C502B86257956A80004F1D1 /* QuestionViewController.swift */,
+				4C502B8C257999AF0004F1D1 /* ResultViewController.swift */,
 				4C502B5D257752E60004F1D1 /* Main.storyboard */,
 				4C502B60257752EB0004F1D1 /* Assets.xcassets */,
 				4C502B62257752EB0004F1D1 /* LaunchScreen.storyboard */,
@@ -153,6 +159,8 @@
 			files = (
 				4C502B77257756590004F1D1 /* TableViewCell.swift in Sources */,
 				4C502B58257752E60004F1D1 /* AppDelegate.swift in Sources */,
+				4C502B87257956A80004F1D1 /* QuestionViewController.swift in Sources */,
+				4C502B8D257999AF0004F1D1 /* ResultViewController.swift in Sources */,
 				4C502B70257755980004F1D1 /* DataResponse.swift in Sources */,
 				4C502B5A257752E60004F1D1 /* SceneDelegate.swift in Sources */,
 				4C502B74257755CB0004F1D1 /* TableViewController.swift in Sources */,

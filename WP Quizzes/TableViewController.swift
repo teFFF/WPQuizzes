@@ -22,9 +22,10 @@ class TableViewController: UITableViewController {
         
         let urlString = "http://quiz.o2.pl/api/v1/quizzes/0/100"
         request(urlString: urlString)
+        overrideUserInterfaceStyle = .light
     }
     
-    //MARK: - Parsing
+    //MARK: - Parsing JSON
     func request(urlString: String) -> Void {
         guard let url = URL(string: urlString) else { return }
         
@@ -55,7 +56,6 @@ class TableViewController: UITableViewController {
         //return 1
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! TableViewCell
@@ -70,57 +70,26 @@ class TableViewController: UITableViewController {
             ]
         cell.titleLabel.attributedText = NSAttributedString(string: item.title, attributes: strokeTextAttributes)
         
-        let urlImageString = item.mainPhoto.url.replacingOccurrences(of: "https://", with: "http://i.wpimg.pl/414x200/")
+        let urlImageString = (item.mainPhoto.url.replacingOccurrences(of: "https://", with: "http://i.wpimg.pl/414x200/"))
         guard let urlImage = URL(string: urlImageString) else { return cell }
-        cell.imageLabel.sd_setImage(with: urlImage, placeholderImage: #imageLiteral(resourceName: "Без названия"), options: [.progressiveLoad], completed: nil)
+        cell.imageLabel.sd_setImage(with: urlImage, placeholderImage: #imageLiteral(resourceName: "placeHolder"), options: [.progressiveLoad], completed: nil)
 
         return cell
     }
+
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showQuiz" {
+            let vc = segue.destination as! QuestionViewController
+            //let cell = sender as! TableViewCell
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            guard let item = self.items?[indexPath.row] else { return }
+            vc.quizID = item.id
+        }
     }
-    */
 
 }
