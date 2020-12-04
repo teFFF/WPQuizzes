@@ -193,7 +193,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonHome" destination="oPB-EF-mXh" eventType="touchUpInside" id="tTV-0a-Okf"/>
                                     <segue destination="obr-Do-xkW" kind="presentation" modalPresentationStyle="fullScreen" id="UmU-8y-jfW"/>
                                 </connections>
                             </button>

@@ -118,11 +118,11 @@ struct Quiz: Codable {
     let cityAvg, cityTime, cityCount: String?
     let userBattleDone: Bool
     let sponsoredResults: SponsoredResults
-
+    
     enum CodingKeys: String, CodingKey {
-            case celebrity
-            case opinionsEnabled = "opinions_enabled"
-            case rates, questions, createdAt, sponsored, title, type, content, buttonStart, tags, shareTitle, flagResults, categories, id, scripts, mainPhoto, category, isBattle, created, canonical, productUrl, publishedAt, latestResults, avgResult, resultCount, cityAvg, cityTime, cityCount, userBattleDone, sponsoredResults
+        case celebrity
+        case opinionsEnabled = "opinions_enabled"
+        case rates, questions, createdAt, sponsored, title, type, content, buttonStart, tags, shareTitle, flagResults, categories, id, scripts, mainPhoto, category, isBattle, created, canonical, productUrl, publishedAt, latestResults, avgResult, resultCount, cityAvg, cityTime, cityCount, userBattleDone, sponsoredResults
     }
 }
 
@@ -164,7 +164,7 @@ struct LatestResult: Codable {
     let endDate: String
     let result: Double
     let resolveTime: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case city
         case endDate = "end_date"
@@ -181,7 +181,7 @@ struct SponsoredResults: Codable {
 enum Text: Codable {
     case integer(Int)
     case string(String)
-
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if let x = try? container.decode(Int.self) {
@@ -194,7 +194,7 @@ enum Text: Codable {
         }
         throw DecodingError.typeMismatch(Text.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for Text"))
     }
-
+    
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {

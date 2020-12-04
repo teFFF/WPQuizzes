@@ -34,7 +34,6 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     private func configureUI(question: Question) {
         DispatchQueue.main.async {
-            
             self.label.text = question.text
             if question.image.url != "" {
                 let urlImageString = question.image.url.replacingOccurrences(of: "https://", with: "http://i.wpimg.pl/414x200/")
@@ -81,7 +80,6 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
         guard let question = currentQuestion else { return }
         guard let answer = currentQuestion?.answers[indexPath.row] else { return }
@@ -101,12 +99,12 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         if let index = questions?.firstIndex(where: { $0.order == question.order}) {
             if index < (questionsCount - 1) {
                 let nextQuestion = questions![index + 1]
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                     self.progress.progress += 1.0 / Float(questionsCount)
                     self.configureUI(question: nextQuestion)
                 }
             } else {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                     let vc = self.storyboard?.instantiateViewController(identifier: "result") as! ResultViewController
                     vc.modalPresentationStyle = .fullScreen
                     vc.guizID = self.quizID
